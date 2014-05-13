@@ -1,4 +1,4 @@
 angular-messages-bus
 ====================
 
-Messages bus to AngularJS applications
+Messages bus for AngularJS applications
