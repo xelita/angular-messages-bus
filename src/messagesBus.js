@@ -143,7 +143,7 @@ messageBusModule.factory('messagesBusService', ['$rootScope', '$log', 'messagesB
             });
 
             // If the event does not exist, create it if createIfNotExist is set to true
-            var event = events ? events[0] : null;
+            var event = events.length > 0 ? events[0] : null;
             if (!event && createIfNotExist) {
                 event = {eventName: eventName, subscribers: []};
                 registry.push(event);
@@ -168,7 +168,7 @@ messageBusModule.factory('messagesBusService', ['$rootScope', '$log', 'messagesB
             });
 
             // Return the subscriber
-            return subscribers ? subscribers[0] : null;
+            return subscribers.length > 0 ? subscribers[0] : null;
         }
     };
 }]);
