@@ -48,6 +48,14 @@ messageBusModule.factory('messagesBusService', ['$rootScope', '$log', 'messagesB
         },
 
         /**
+         * Return the events subscribers registry.
+         */
+        registry: function () {
+            $log.debug('IN messagesBusService.registry.');
+            return registry;
+        },
+
+        /**
          * Register a subscriber to the given eventName.
          * If a subscriber with the same name is already registered, it will not be replaced.
          * @param eventName the event name the subscriber will be listening to
