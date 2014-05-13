@@ -1,0 +1,35 @@
+{
+    "name": "angular-messages-bus",
+    "version": "1.0.0",
+    "homepage": "https://github.com/xelita/angular-messages-bus",
+    "authors": [
+        "xelita <admin@xelita.com>"
+    ],
+    "description": "Messages bus for AngularJS applications",
+    "main": "src/messagesBus.js",
+    "keywords": [
+        "angular",
+        "messages",
+        "bus",
+        "publish",
+        "subscribe",
+        "event"
+    ],
+    "license": "MIT",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "devDependencies": {
+        "angular": "~1.2.3",
+        "angular-mocks": "~1.2.3",
+        "jquery": "~2.1.1"
+    },
+    "dependencies": {
+        "angular": "~1.2.3"
+    }
+}
