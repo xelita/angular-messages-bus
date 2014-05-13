@@ -1,0 +1,32 @@
+{
+    "name": "angular-messages-bus",
+    "version": "1.0.0",
+    "description": "Bring Apache Cordova Network Information API to AngularJS Apps",
+    "homepage": "https://github.com/xelita/angular-messages-bus",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/xelita/angular-messages-bus.git"
+    },
+    "bugs": {
+        "url": "https://github.com/xelita/angular-messages-bus/issues"
+    },
+    "keywords": [
+        "angular",
+        "cordova",
+        "network",
+        "plugin"
+    ],
+    "author": "xelita <admin@xelita.com>",
+    "license": "MIT",
+    "main": "src/cordovaNetworkInformationModule.js",
+    "devDependencies": {
+        "karma": "~0.12.14",
+        "karma-jasmine": "~0.1.5",
+        "karma-phantomjs-launcher": "~0.1.4",
+        "bower": "~1.3.3"
+    },
+    "scripts": {
+        "postinstall": "bower install",
+        "test": "karma start test/karma.conf.js"
+    }
+}
