@@ -12,9 +12,11 @@
     },
     "keywords": [
         "angular",
-        "cordova",
-        "network",
-        "plugin"
+        "messages",
+        "bus",
+        "publish",
+        "subscribe",
+        "event"
     ],
     "author": "xelita <admin@xelita.com>",
     "license": "MIT",
