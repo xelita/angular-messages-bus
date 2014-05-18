@@ -22,7 +22,49 @@ or use the minified version:
 var myapp = angular.module('myapp', ['messageBusModule']);
 ```
 
-+ Use the messagesBusService as controller dependencies and call messagesBusService API:
++ Use the messagesBusService as controller dependency and call messagesBusService API:
+
+Several steps need to be followed to make the dream come true!
+
+### Registering subscriber to a specific event
+
+The first thing you need to do is to register a subscriber to a specific event.
+The subscriber will be called once the event it is registered will be dispatched.
+
+**The subscriber needs to be composed at least of:**
++ a name that identifies it uniquely
++ a handler: a function that will be called once the event will be raised. The function has a parameter that is provided during the event publishing call...
+
+```javascript
+
+    // Define a subscriber
+    var subscriber = {
+        name: 'event-subscriber',
+        handler: function (data) {
+            $scope.result = data;
+        }
+    };
+
+    // Register the subscriber to the event named 'event'
+    messagesBusService.register('event', subscriber);
+};
+```
+
+### Dispatching the event
+
+Once the subscriber has been successfully registered to the event, invoking it is a breeze!
+The `messageBusService` comes with the `publish` method which allow to make the job done...
+
+```javascript
+
+    // Publishing event (this will cause all the event subscribers to be invoked on their handler function)
+    messagesBusService.publish('event', { msg: 'Hello World!' });
+};
+```
+
+The second parameter constains arbitrary data which will be transmited to each subscribers.
+
+A quick sample:
 
 ```javascript
 $scope.result = 'nothing received yet...';
@@ -32,6 +74,7 @@ $scope.testSubscription = function() {
     var subscriber = {
         name: 'event-subscriber',
         handler: function (data) {
+            // Store the given data in scope: { msg: 'Hello World!' }
             $scope.result = data;
         }
     };
@@ -40,7 +83,7 @@ $scope.testSubscription = function() {
     messagesBusService.register('event', subscriber);
     
     // Dispatch the event ($scope.result will change)
-    messagesBusService.publish('event');
+    messagesBusService.publish('event', { msg: 'Hello World!' });
 };
 ```
 
