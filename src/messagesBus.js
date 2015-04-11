@@ -1,6 +1,6 @@
 /**
  * Angular Module defining a global messages bus.
- *
+ * @author Xelita (https://github.com/xelita)
  */
 var messageBusModule = angular.module('messageBusModule', []);
 
