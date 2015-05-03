@@ -7,9 +7,10 @@ For example: One can publish an event to the bus and every controllers intereste
 
 ## Quick start
 
-+ Include messagesBus.js in your Cordova application.
++ Include messagesBus.js in your Cordova application. Please note that this library is using jquery internally. So you need to include it in your application.
 
 ```html
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="js/messagesBus.js"></script>
 ```
 
