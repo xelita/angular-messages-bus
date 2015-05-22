@@ -1,10 +1,20 @@
-# [angular-messages-bus][![Build Status](https://travis-ci.org/xelita/angular-messages-bus.png?branch=master)](https://travis-ci.org/xelita/angular-messages-bus)
+[![Bower version](https://badge.fury.io/bo/angular-messages-bus.svg)](http://badge.fury.io/bo/angular-messages-bus)
+[![Build Status](https://travis-ci.org/xelita/angular-messages-bus.png?branch=master)](https://travis-ci.org/xelita/angular-messages-bus)
+
+# [angular-messages-bus]
 
 This project defines a messages bus for AngularJS applications.
 The usual use case is to dispatch events between several AngularJS controllers.
 
 For example: One can publish an event to the bus and every controllers interested in it are notified and can also react accordingly...
-
+  
+## Install
+  
+### Using Bower
+  
+ ``` bash
+ bower install angular-messages-bus
+ ```
 ## Quick start
 
 + Include messagesBus.js in your Cordova application. Please note that this library is using jquery internally. So you need to include it in your application.
